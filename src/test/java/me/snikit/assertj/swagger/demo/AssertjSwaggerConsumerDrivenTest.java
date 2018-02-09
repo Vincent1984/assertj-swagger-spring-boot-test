@@ -16,7 +16,7 @@ import io.github.robwin.swagger.test.SwaggerAssertions;
 public class AssertjSwaggerConsumerDrivenTest {
 	@Test
 	public void validateThatImplementationSatisfiesConsumerSpecification() throws IOException {
-		String swaggerPath = new ClassPathResource("swagger.yaml").getFile().getPath();
+		String swaggerPath = new ClassPathResource("swagger-v1.yaml").getFile().getPath();
 		SwaggerAssertions.assertThat("http://localhost:8080/v2/api-docs").satisfiesContract(swaggerPath);
 	}
 }
